@@ -1,0 +1,148 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #0C0002;
+}
+
+body
+{
+    height: 100vh;
+    background: #8941AD;
+}
+
+.top
+{
+    width: 100%;
+    height: 5em;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.top ul li
+{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.container
+{
+    height: 400px;
+    width: 400px;
+    background: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 40px rgba(0,0,0,.25);
+    display: grid;
+    place-items: center;
+}
+.circular-progress
+{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    background: purple;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.circular-progress::before
+{
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background: #fff;
+    border-radius: 50%;
+}
+.value-container
+{
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    color: #0C0002;
+}
+
+input[type="range"] 
+{
+    -webkit-appearance: none;
+    appearance: none;
+
+    cursor: pointer;
+    outline: none;
+
+    height: 15px;
+    background: #ccc;
+    border-radius: 16px;
+
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-thumb, 
+input[type="range"]::-moz-range-thumb
+{
+    box-shadow: -407px 0 0 400px purple;
+}
+.buttons, .set-value
+{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#input
+{
+    border: 0;
+    outline: 0;
+    appearance: textfield;
+    background: #ccc;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 45%;
+    text-align: center;
+}
+
+
+.set-value button
+{
+    width: 45%;
+    font-size: 16px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: #CC5446;
+    color: #eee;
+    border-radius: 34px;
+    transition: background .2s;
+}
+.set-value button:hover
+{
+    background: #aa3224;
+}
+
+
+.buttons button
+{
+    width: 45%;
+    font-size: 24px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    background: #8941AD;
+    color: #eee;
+    border-radius: 34px;
+    transition: background .2s;
+}
+.buttons button:hover
+{
+    background: purple;
+}
